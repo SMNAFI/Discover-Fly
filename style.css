@@ -123,25 +123,25 @@ nav ul li a:hover, a.active{
 #confirmation-page{
     display: none;    
     text-transform: uppercase;
-    font-family: 'Bebas Neue', cursive;
     margin-top: 100px;
     margin-left: 100px;
     color: #fff;
     height: 80vh;
 }
 #confirmation-page h1{
+    font-family: 'Bebas Neue', cursive;
     font-size: 70px;
     font-weight: 400;
 }
 #confirmation-page h3{
-    font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
     font-weight: 400;
+    font-size: 45px;
 }
 #confirmation-page p{
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 #confirmation-page a{
-    color:burlywood;
+    color:lightsalmon;
     text-decoration: none;
 }

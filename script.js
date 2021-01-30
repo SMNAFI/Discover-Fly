@@ -1,11 +1,13 @@
 // onClick function for increasing/decreasing ticket amount using +- sign 
-// action = plus / minus
+// action:true = +  action:false = -
 function ticketAmountHandler(action, className) {
     let ticketAmount = parseInt(document.getElementById(className).value);
-    if (action)
+    if (action) {
         ticketAmount++;
-    else if (!action && ticketAmount > 0)
+    }
+    else if (!action && ticketAmount > 0) {
         ticketAmount--;
+    }
 
     document.getElementById(className).value = ticketAmount;
     costCalculation();
@@ -40,7 +42,7 @@ function bookingConfirm() {
         document.getElementById('confirmation-page').style.display = 'block';
     }
     // if user click book-now without purchasing 
-    else{
+    else {
         alert("You haven't purchase any ticket yet.");
     }
 }
