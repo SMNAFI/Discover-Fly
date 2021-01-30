@@ -13,6 +13,13 @@ function ticketAmountHandler(action, className) {
     costCalculation();
 }
 
+
+//set Text
+function setInnerText(id, text) {
+    document.getElementById(id).innerText = text;
+}
+
+
 // cost display for calculation section
 function costCalculation() {
     let firstClass = parseInt(document.getElementById('firstClass').value);
@@ -20,10 +27,11 @@ function costCalculation() {
     let currentSubtotal = firstClass * 150 + economy * 100;
     let vat = Math.round(currentSubtotal * 0.1);
 
-    document.getElementById('subTotal').innerText = currentSubtotal;
-    document.getElementById('vat').innerText = vat;
-    document.getElementById('total').innerText = currentSubtotal + vat;
+    setInnerText('subTotal', currentSubtotal);
+    setInnerText('vat', vat);
+    setInnerText('total', currentSubtotal + vat);
 }
+
 
 // function for handling user input from direct input
 function inputValue(className) {
@@ -34,12 +42,27 @@ function inputValue(className) {
     costCalculation();
 }
 
+
 // after book now button is clicked
 function bookingConfirm() {
+    let firstClass = parseInt(document.getElementById('firstClass').value);
+    let economy = parseInt(document.getElementById('economy').value);
     let totalCost = parseInt(document.getElementById('total').innerText);
-    if (totalCost) {
+    
+    if (totalCost > 0) {
         document.getElementById('booking-page').style.display = 'none';
         document.getElementById('confirmation-page').style.display = 'block';
+
+        if(firstClass > 0) {
+            setInnerText('firstClass-ticket', firstClass);
+            document.getElementById('first-class').style.display = 'block';
+        }
+        if(economy > 0) {
+            setInnerText('economy-ticket', economy);
+            document.getElementById('economy-class').style.display = 'block';
+        }
+        
+        setInnerText('grand-total', totalCost);
     }
     // if user click book-now without purchasing 
     else {

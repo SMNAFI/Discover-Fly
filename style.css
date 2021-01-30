@@ -121,8 +121,7 @@ nav ul li a:hover, a.active{
 
 /* Confirmation Page */
 #confirmation-page{
-    display: none;    
-    text-transform: uppercase;
+    display: none;
     margin-top: 100px;
     margin-left: 100px;
     color: #fff;
@@ -132,16 +131,28 @@ nav ul li a:hover, a.active{
     font-family: 'Bebas Neue', cursive;
     font-size: 70px;
     font-weight: 400;
+    line-height: 80%;
 }
 #confirmation-page h3{
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
-    font-size: 45px;
+    font-size: 40px;
 }
 #confirmation-page p{
-    font-size: 16px;
+    font-size: 20px;
 }
 #confirmation-page a{
     color:lightsalmon;
     text-decoration: none;
+}
+
+.text-highlighter{
+    color: lightcoral;
+}
+.gap{
+    height: 40px;
+}
+
+#first-class, #economy-class{
+    display: none;
 }
